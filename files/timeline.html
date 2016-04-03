@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>::TimeLine JS Plugin::</title>
+  <link rel="stylesheet" href="timeline.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content-wrapper">
+
+    
+      <div class="timeline-wrapper offset-left-28p pull-left">
+       <!-- <div class="timeline pull-left"></div> -->
+       <div class="timeline pull-left offset-left-20" id="minifyUI"></div>
+
+     </div>
+     
+
+     <div class="timelineData-wapper pull-left offset-left-20">
+      <div class="timelineData" id="timelineData1"></div>
+      <!-- <input class="timelineData" type="text" id="timelineData1"> -->
+    </div>
+  </div>
+</div>
+
+<script src="jquery-2.1.4.min.js"></script>
+<script src="timeline.min.js"></script>
+
+<script>
+  $("#minifyUI").timeLine({
+   valueTo : '#timelineData1', 
+   wrapperHeight : '100%', /*600, 800.. or '<value>%', '<value>em', ['height', min-height/auto]*/
+   outputFormat: 'mmmm/yyyy', /*mmmm/yyyy, mm-yy, yyyy.mmmm*/
+   visibleMonthNow: ['auto'], /*[1,1,1,1,0,0,0,0,0,0,1,1], ['auto']*/
+   visibleMonthPrev: ['auto', 4] /*[1,1,1,1,0,0,0,0,0,0,1,1], ['auto', 4], ['auto']*/,
+   currentYear: (new Date).getFullYear(),
+   currentMonth: 4/*(new Date().getMonth()+1)*/,
+   visibleYears: 8,
+   visibleCurrentYear: true, /*true, false*/
+   visibleNearestYear: false, /*1, 0, -1, true and ['currentYear', min-visible month]*/
+   autoSelectMonth: 'currentYear', /*true, false, currentYear*/
+   collapseToggle: ['year', 12], /*[true], [month], [year, min-visible current year], */
+   minifyUI: true, /*true, false*/
+   expandMonthsSpeed: 450 /*400, 500.. or 'slow/normal/fast'*/
+ });
+
+</script>
+
+</body>
+</html>
