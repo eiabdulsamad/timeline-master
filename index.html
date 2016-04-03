@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline Master</title>
+  <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+  <link rel="stylesheet" href="stylesheets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/css/ionicons.min.css">
+  <link rel="stylesheet" href="stylesheets/css/theme/highlight.css">
+  <link rel="stylesheet" href="stylesheets/css/styles.css">
+  <!--[if lt IE 9]>
+    <script src="javascripts/js/html5shiv.min.js"></script>
+    <script src="javascripts/js/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body class="home">
+ 
+  <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+  <div class="master-head">
+    <h1>Timeline Master</h1>
+    <p>Get modern wide monthpicker</p><br>
+     <a href="https://github.com/eiabdulsamad/timeline-master/zipball/master" class="btn btn-default"><i class="fa fa-file-zip-o"></i> <small>Download</small> .zip file</a>
+     <a href="https://github.com/eiabdulsamad/timeline-master/tarball/master" class="btn btn-default"><i class="fa fa-file-zip-o"></i> <small>Download</small> .tar file</a>
+     <div class="clearfix"></div>
+      <a href="https://github.com/eiabdulsamad/timeline-master/tree/master" class="btn git-button"><i class="fa fa-github"></i> View on GitHub</a>
+  </div>
+  </div>
+</header>
+
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="row">
+  <div class="container">
+  <h3 class="hd">Features</h3>
+  <ul class="ftrs">
+    <li>Fully responsive. Scales with its container.(Vertical)</li>
+    <li>Two mode UI</li>
+    <li>Easy Initialization</li>
+    <li>Uses CSS3 when available. Fully functional when not.</li>
+    <li>Swipe enabled. Or disabled, if you prefer.</li>
+    <li>Desktop mouse dragging</li>
+    <li>Unlimited years selection</li>
+    <li>Multiple usage</li>
+  </ul>
+  <br><br>
+  <h3 class="hd">Timeline usage</h3>
+  <h4 class="sub-hd">Simple way</h4>
+    <pre><code class="html">&lt;!-- Timeline stylesheet --&gt;
+&lt;link rel="stylesheet" href="timeline.css"&gt;
+
+&lt;!-- Timeline main wrapper --&gt;
+&lt;div class="timeline-wrapper"&gt;
+  &lt;!-- Timeline runner --&gt;
+  &lt;div class="timeline">&lt;/div&gt; 
+  &lt;!-- Get timeline value --&gt;
+  &lt;div class="timelineData">&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Timeline JS --&gt;
+&lt;script src="timeline.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<br><br>
+<h4 class="sub-hd">Options customize way</h4>
+    <pre><code class="html">&lt;!-- Timeline stylesheet --&gt;
+&lt;link rel="stylesheet" href="timeline.css"&gt;
+
+&lt;!-- Timeline main wrapper --&gt;
+&lt;div class="timeline-wrapper"&gt;
+  &lt;!-- Timeline runner --&gt;
+  &lt;div class="timeline" id="my_timeline">&lt;/div&gt; 
+  &lt;!-- Get timeline value --&gt;
+  &lt;div class="timelineData" id="my_timeline_data">&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Timeline JS --&gt;
+&lt;script src="timeline.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Add custom options --&gt;
+&lt;script&gt;
+  $("#my_timeline").timeLine({
+   valueTo : '#my_timeline_data', 
+   wrapperHeight : '100%', /*600, 800.. or '<value>%', '<value>em', ['height', min-height/auto]*/
+   outputFormat: 'mmmm/yyyy', /*mmmm/yyyy, mm-yy, yyyy.mmmm*/
+   visibleMonthNow: ['auto'], /*[1,1,1,1,0,0,0,0,0,0,1,1], ['auto']*/
+   visibleMonthPrev: ['auto', 4] /*[1,1,1,1,0,0,0,0,0,0,1,1], ['auto', 4], ['auto']*/,
+   currentYear: (new Date).getFullYear(),
+   currentMonth: 4/*(new Date().getMonth()+1)*/,
+   visibleYears: 8,
+   visibleCurrentYear: true, /*true, false*/
+   visibleNearestYear: false, /*1, 0, -1, true and ['currentYear', min-visible month]*/
+   autoSelectMonth: 'currentYear', /*true, false, currentYear*/
+   collapseToggle: ['year', 12], /*[true], [month], [year, min-visible current year], */
+   minifyUI: true, /*true, false*/
+   expandMonthsSpeed: 450 /*400, 500.. or 'slow/normal/fast'*/
+ });
+&lt;/script&gt;
+</code></pre>
+<br><br>
+  <h3 class="hd">Demo</h3>
+  <iframe src="source/timeline.html" frameborder="0"></iframe>
+</div>
+</div>
+</div>
+ 
+<div class="clearfix"></div>
+ <footer class="footer"><p>© 2016 eiabdulsamad</p></footer>
+  
+  <script src="javascripts/js/jquery.min.js"></script>
+  <script src="javascripts/js/bootstrap.min.js"></script>
+  <script src="javascripts/js/highlight.min.js"></script>
+  <script src="javascripts/js/custom.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
